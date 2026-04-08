@@ -1,6 +1,7 @@
 
 package com.rent.config;
 
+import com.rent.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -33,7 +34,7 @@ import java.util.List;
 public class SecurityConfig {
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private MyUserDetailsService userDetailsService;
 
     @Autowired
     private JwtFilte jwtFilter;
