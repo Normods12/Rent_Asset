@@ -22,4 +22,9 @@ public class ItemService {
         itemsRepo.save(item);
         return itemCreationDto;
     }
+
+    public List<ItemCreationDto> getAllItems() {
+        List<Items> itemsList = itemsRepo.findAll();
+        return itemMapper.toDtoList(itemsList);
+    }
 }

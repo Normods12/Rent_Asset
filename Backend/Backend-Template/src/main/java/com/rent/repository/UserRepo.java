@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.rent.entity.Users;
 
+
 @Repository
 public interface UserRepo extends JpaRepository<Users,Integer> {
 
