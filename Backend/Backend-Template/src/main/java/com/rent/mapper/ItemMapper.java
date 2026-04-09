@@ -2,9 +2,11 @@ package com.rent.mapper;
 
 import com.rent.dto.ItemCreationDto;
 import com.rent.entity.Items;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class ItemMapper {
 
     public Items toEntity(ItemCreationDto itemCreationDto) {

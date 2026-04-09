@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -17,9 +18,9 @@ public class ItemController {
     private ItemService itemService;
 
     @PostMapping
-    public ResponseEntity<ItemCreationDto> createItem(@RequestBody ItemCreationDto item) {
+    public ResponseEntity<ItemCreationDto> createItem(@RequestBody ItemCreationDto item, Principal principal) {
 
-        return  new ResponseEntity<>(itemService.save(item), HttpStatus.CREATED);
+        return  new ResponseEntity<>(itemService.save(item,principal), HttpStatus.CREATED);
     }
 
     @GetMapping
